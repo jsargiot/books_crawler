@@ -1,1 +1,2 @@
 scrapy-magicfields
+boto
