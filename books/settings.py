@@ -6,6 +6,7 @@ SPIDER_MODULES = ['books.spiders']
 NEWSPIDER_MODULE = 'books.spiders'
 
 ROBOTSTXT_OBEY = True
+
 HTTPCACHE_ENABLED = True
 
 SPIDER_MIDDLEWARES = {
