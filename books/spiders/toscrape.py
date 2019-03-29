@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+import time
 
 class ToscrapeSpider(scrapy.Spider):
     name = "toscrape"
@@ -11,6 +11,7 @@ class ToscrapeSpider(scrapy.Spider):
 
     def parse(self, response):
         for book_url in response.css("article.product_pod > h3 > a ::attr(href)").extract():
+            time.sleep(60)
             yield scrapy.Request(response.urljoin(book_url), callback=self.parse_book_page)
         next_page = response.css("li.next > a ::attr(href)").extract_first()
         if next_page:
