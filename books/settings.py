@@ -23,3 +23,5 @@ MAGIC_FIELDS = {
     "url": "scraped from $response:url",
     "domain": "$response:url,r'https?://([\w\.]+)/']",
 }
+
+SOME_SETTING = True
